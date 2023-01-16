@@ -70,6 +70,7 @@ public class Main {
 
         WebServer webServer = new WebServer(h1);
         FileLogger fileLogger = new FileLogger("logs.txt");
+        webServer.attach(fileLogger);
 
         User regularUser = new User(false);
         User adminUser = new User(true);
